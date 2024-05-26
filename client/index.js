@@ -1,21 +1,11 @@
 import { postBook, getBooks } from './utils/utils'
 
-
 async function addBook(bookData) {
     const result = await postBook(bookData);
     if (result) {
         console.log('Book posted successfully:', result);
     } else {
         console.log('Failed to post book');
-    }
-}
-
-async function loadBooks() {
-    const books = await getBooks();
-    if (books) {
-        return books
-    } else {
-        console.log('Failed to fetch books');
     }
 }
 
