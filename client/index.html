@@ -6,6 +6,32 @@
   </head>
 
   <body>
-    <h1>Hola mundo</h1>
+    <div class="card">
+      <h2 class="Form-title">Publica tu libro</h2>
+      <p class="Form-description">Completa los campos para publicar tu libro</p>
+      <form id="Form" class="Form">
+        <input type="text" name="title" placeholder="Título" required>
+        <input type="text" name="author" placeholder="Autor" required>
+        <input type="text" name="year" placeholder="Año" required>
+        <input type="text" name="editorial" placeholder="Editorial" required>
+        <input type="submit" value="Publicar">
+      </form>
+    </div>
+    <div class="card">
+      <table id="table" class="Books">
+        <thead>
+          <tr>
+            <th>Título</th>
+            <th>Autor</th>
+            <th>Año</th>
+            <th>Editorial</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </div>
+    
+
+    <script src="index.js"></script>
   </body>
 </html>
