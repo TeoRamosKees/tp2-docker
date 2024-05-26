@@ -1,4 +1,4 @@
-import services from "../services/books";
+import services from "../services/books.js";
 
 const getAllBooks = async (_, res) => {
   try {

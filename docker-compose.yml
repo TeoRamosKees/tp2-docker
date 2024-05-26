@@ -16,7 +16,7 @@ services:
     ports:
       - "3000:3000"
     depends_on:
-      - couch
+      - couchdb
 
   client:
     build:

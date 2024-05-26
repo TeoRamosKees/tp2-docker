@@ -1,5 +1,5 @@
 import express from "express";
-import booksRouter from "./routes/books";
+import booksRouter from "./routes/books.js";
 
 const app = express();
 app.use(express.json());

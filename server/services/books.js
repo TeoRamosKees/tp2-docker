@@ -1,5 +1,5 @@
 import PouchDB from "pouchdb";
-import books from "../data/books";
+import books from "../data/books.js";
 
 const db = new PouchDB("http://admin:admin@couchdb:5984/books");
 
