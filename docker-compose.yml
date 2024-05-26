@@ -1,5 +1,5 @@
 services:
-  couch:
+  couchdb:
     image: couchdb:latest
     restart: always
     ports:
