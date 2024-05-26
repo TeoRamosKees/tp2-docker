@@ -1,0 +1,27 @@
+services:
+  couch:
+    image: couchdb:latest
+    restart: always
+    ports:
+      - "5984:5984"
+    environment:
+      COUCHDB_USER: admin
+      COUCHDB_PASSWORD: admin
+    volumes:
+      - ./couchdb_data:/opt/couchdb/data
+
+  server:
+    build:
+      context: ./server
+    ports:
+      - "3000:3000"
+    depends_on:
+      - couch
+
+  client:
+    build:
+      context: ./client
+    ports:
+      - "8080:80"
+    depends_on:
+      - server
