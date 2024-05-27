@@ -28,14 +28,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const addBook = async (book) => {
     try {
-      const response = await fetch(url, {
+      await fetch(url, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(book),
       });
-      const newBook = await response.json();
       fetchBooks();
     } catch (error) {
       console.error("Error creating book:", error);
